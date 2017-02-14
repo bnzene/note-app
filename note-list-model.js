@@ -11,6 +11,5 @@
   }
 
   exports.List = List;
-  exports.showNotes = List.showNotes;
-  exports.addNote = List.addNote;
+
 })(this);
