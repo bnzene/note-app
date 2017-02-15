@@ -1,6 +1,6 @@
 (function(exports) {
     function Controller(viewList){
-        this.viewList = viewList;
+        this._viewList = viewList;
     }
 
     Controller.prototype.updateNotes = function(element) {
