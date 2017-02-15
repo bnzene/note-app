@@ -1,4 +1,26 @@
-function testNoteController() {
+function testNoteControllerInstantiates() {
+
+  function ListDouble() {};
+  ListDouble.prototype = {
+    addNote: function() {}
+  };
+  function ViewListDouble(ListDouble) {};
+
+  ViewListDouble.prototype = {
+    displayList: function() {
+      return "<ul><li><div>Favourite Drink: Sprite</div></li></ul>";
+    }
+  }
+
+  var list = new ListDouble()
+  var viewList = new ViewListDouble(list)
+  var controller = new Controller(viewList)
+  assert.isTrue(controller.viewList === viewList);
+};
+
+testNoteControllerInstantiates()
+
+function testNoteControllerUpdateNotes() {
   function ListDouble() {};
   ListDouble.prototype = {
     addNote: function() {}
@@ -20,4 +42,4 @@ function testNoteController() {
   assert.isTrue(element.innerHTML === "<ul><li><div>Favourite Drink: Sprite</div></li></ul>");
 }
 
-testNoteController()
+testNoteControllerUpdateNotes()

@@ -5,5 +5,4 @@ window.onload = (function(){
   var controller = new Controller(viewList)
   var element = document.getElementById('app');
   controller.updateNotes(element);
-
 })
