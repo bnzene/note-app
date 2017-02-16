@@ -15,7 +15,7 @@ function testNoteControllerInstantiates() {
   var list = new ListDouble()
   var viewList = new ViewListDouble(list)
   var controller = new Controller(viewList)
-  assert.isTrue(controller.viewList === viewList);
+  assert.isTrue(controller._viewList === viewList);
 };
 
 testNoteControllerInstantiates()

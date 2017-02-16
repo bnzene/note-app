@@ -4,7 +4,7 @@
     }
 
     Controller.prototype.updateNotes = function(element) {
-        element.innerHTML = this.viewList.displayList();
+        element.innerHTML = this._viewList.displayList();
     };
 
     exports.Controller = Controller;
