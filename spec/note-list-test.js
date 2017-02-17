@@ -14,3 +14,9 @@ function testAddNote(){
   assert.isTrue(list.showNotes()[0].getText() === "No test framework is really cool.");
 };
 testAddNote();
+
+function testNoteHasId() {
+  var list = new List();
+  list.addNote("No test framework is really cool.")
+  assert.isTrue(list.showNotes()[0].id === 0);
+}

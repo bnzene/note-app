@@ -2,6 +2,10 @@
   function Note(text){
     this._text = text
   }
+
+  Note.prototype.setId = function(id) {
+      this.id = id
+  };
   Note.prototype.getText = function(){
     return this._text
   }
