@@ -11,9 +11,9 @@
     }
     return "<ul>" + string + "</ul>"
   }
-  else{
-    return "no notes"
-  }
+    else{
+      return "no notes"
+    }
   }
 
   exports.ViewList = ViewList
