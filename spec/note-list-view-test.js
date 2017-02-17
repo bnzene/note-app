@@ -14,6 +14,14 @@ function testEmptyHtmlList() {
 }
 testEmptyHtmlList();
 
+function testDisplaysFirst20CharWithEllipsis() {
+  var list = new List();
+  list.addNote("Hello, is it me you're looking for")
+  var viewList = new ViewList(list);
+  assert.isTrue(viewList.displayList() === "<ul><li><div>Hello, is it me you'...</div></li></ul>")
+}
+testOneNoteInHtmlList();
+
 function testOneNoteInHtmlList() {
   var list = new List();
   list.addNote("Hello")

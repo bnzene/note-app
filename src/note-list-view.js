@@ -7,7 +7,7 @@
     if (this._list._notes.length > 0){
       var string = '';
     for (var i = 0; i < this._list._notes.length; i++) {
-      string += "<li><div>"+this._list._notes[i]._text+"</div></li>"
+      string += "<li><div>"+this._list._notes[i].getText().substr(0,20)+"..."+"</div></li>"
     }
     return "<ul>"+string+"</ul>"
   }
